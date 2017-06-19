@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Do Math Practice Problem</title>
+</head>
+<body>
+    <h1>Do Math</h1>
+
+
+    <script>
+        function doMath(num1, num2, op){
+            let result;
+            const mathLookup = {
+                'x': (num1 * num2),
+                'X': (num1 * num2),
+                '*': (num1 * num2),
+                '+': (num1 + num2),
+                '-': (num1 - num2),
+                '/': (num1 / num2)
+            };
+            for(key in mathLookup){
+                if(key === op){
+                    result = mathLookup[key];
+                    console.log('result:',result);
+                }
+            }
+        }
+        doMath(2,3,'-');
+    </script>
+</body>
+</html>
