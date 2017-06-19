@@ -25,11 +25,17 @@
             for(key in mathLookup){
                 if(key === op){
                     result = mathLookup[key];
-                    console.log('result:',result);
+                    console.log('operator and result:',key,result);
                 }
             }
         }
+        //Tests
         doMath(2,3,'-');
+        doMath(2,3,'+');
+        doMath(2,3,'x');
+        doMath(2,3,'*');
+        doMath(2,3,'X');
+        doMath(2,3,'/');
     </script>
 </body>
 </html>
