@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Number</title>
+</head>
+<body>
+    <h1>Random Number</h1>
+
+    <script>
+        function randomRange(startNum, endNum){
+            if(endNum === undefined){
+                if(startNum instanceof Array){ // a more performant way to check if an array vs Array.isArray(startNum)
+                    let arrayMin = 0;
+                    let arrayMax = startNum.length - 1;
+                    let randomIndex = randomize(arrayMin, arrayMax); // Find a random index to directly access
+                    return arrayResult = startNum[randomIndex];
+                } else if(typeof startNum === "string"){
+                    let newNum = parseFloat(startNum);
+                    if(isNaN(newNum)){
+                        return "Please enter a valid number";
+                    }
+                    return newNum;
+                }
+                return startNum;
+            } else if(startNum !== undefined && endNum !== undefined) {
+                return result = randomize(startNum, endNum);
+            }
+        }
+        function randomize(min, max){
+            let minimum = Math.ceil(min);
+            let maximum = Math.floor(max);
+            return result = Math.floor(Math.random()*(maximum - minimum)) + minimum;
+        }
+
+        // Tests
+        console.log(randomRange(1,50));
+        console.log(randomRange(1,50));
+        console.log(randomRange(1,50));
+        console.log(randomRange([23,4,5,211,23,6,7,44]));
+        console.log(randomRange([23,4,5,211,23,6,7,44]));
+        console.log(randomRange([23,4,5,211,23,6,7,44]));
+        console.log(randomRange([23,4,5,211,23,6,7,44]));
+        console.log(randomRange(3));
+        console.log(randomRange(2));
+    </script>
+</body>
+</html>
