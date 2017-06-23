@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Combo Math</title>
+</head>
+<body>
+<h1>Cococococombo Math</h1>
+
+<script>
+    // Utilizes imperfect input somehow (too many or too few arguments passed in)
+
+    function cocococomboMath(){
+        //multiply first number x second number
+        //adds the third number to the result
+        //divides the result by the fourth number
+        //the result of that subtracts the fifth number
+
+        let args = arguments;
+        let result;
+
+        if(args.length < 5 && args.length > 0 && typeof args[0] === 'number'){
+            for(let i = args.length; i < 5; i++){
+                args[i] = 1; // Arbitrary Filler
+            }
+        } else if(args.length === 0 || typeof args[0] !== 'number'){ // Checks if no input or input is a string
+            return 'No valid input, try again';
+        }
+
+        result = args[0] * args[1];
+        result += args[2];
+        result /= args[3];
+        result -= args[4];
+
+        if(args.length > 5) {
+            for (let j = 5; j < args.length; j++) {
+                result += args[j]; // An option to utilize the input if it's a number, depends on the function purpose
+            }
+        }
+        return result;
+    }
+
+    console.log(cocococomboMath(1,2,3,4,5)); //-3.75
+    console.log(cocococomboMath(2,2,2,2,2)); //1
+    console.log(cocococomboMath(1,1,3)); //3
+    console.log(cocococomboMath()); // No valid input
+    console.log(cocococomboMath(1,2,3,4,5,6)); // 2.25
+    console.log(cocococomboMath('love')); // No valid input
+
+</script>
+
+</body>
+</html>
