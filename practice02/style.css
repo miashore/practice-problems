@@ -1,8 +1,8 @@
 body {
-	font-family: Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 .container {
-	height: 25vh;
+    height: 25vh;
     background-color: #abc9d3;
     width: 60vw;
     border-radius: 10px;
@@ -20,15 +20,15 @@ input {
     padding: 2%;
 }
 .submit {
-	border-radius: 2px;
-	border: none;
-	padding: 2%;
-	background-color: #acdaff;
+    border-radius: 2px;
+    border: none;
+    padding: 2%;
+    background-color: #acdaff;
 }
 .submit:hover {
-	background-color: #67849c;
+    background-color: #67849c;
 }
 .response {
-	display: block;
-	margin-top: 2%;
+    display: block;
+    margin-top: 2%;
 }
