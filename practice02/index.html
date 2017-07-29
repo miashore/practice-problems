@@ -2,38 +2,17 @@
 <html>
 <head>
 	<title>Practice Problem 2</title>
-	<script>
-	/*
-		Write a function that takes one parameter
-		Parameter 1 - An array of anything
-		The function should output an array that is in reverse order from the input array
-		Example:
-		var myArray = ['hello', 45, 'Bob', 'what', '23'];
-		arrayReverse(myArray);
-		Output - ['23', 'what', 'Bob', 45, 'hello']
-	*/
-
-	// things I know: where the array starts and ends, and the length of it.
-	// I could create a whole new array or I can preserve the original, either way I can loop through it
-
-	var array = ['hello', 45, 'Bob', 'what', 23];
-
-	function arrayReverse(sampleArr){
-		var newArr = [];
-		for(var i = sampleArr.length - 1; i >= 0; i--){
-			newArr.push(sampleArr[i]);
-		}
-		return newArr;
-	}
-
-	arrayReverse(array);
-
-
-
-
-	</script>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body onload="handleSubmit()">
+	<div class="container">
+		<div class="content">
+			<p>Insert a list of anything separated by commas</p>
+			<input type="text" placeholder="Ex:'string', 23, 'hello', '23'">
+			<button class="submit">Reverse It</button>
+		</div>
+	</div>
 
 </body>
 </html>
